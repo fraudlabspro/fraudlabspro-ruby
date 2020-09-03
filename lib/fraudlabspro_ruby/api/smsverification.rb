@@ -22,6 +22,7 @@ module FraudlabsproRuby
           'format' => params[:format] || 'json',
           'tel' => params[:tel],
           'mesg' => params[:mesg] || '',
+          'otp_timeout' => params[:otp_timeout] || 3600,
           'country_code' => params[:country_code] || ''
         })
 
