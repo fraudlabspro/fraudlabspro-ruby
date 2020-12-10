@@ -160,7 +160,7 @@ require 'fraudlabspro_ruby'
 FraudlabsproRuby::Configuration.api_key = 'YOUR_API_KEY'
 
 result = FraudlabsproRuby::Api::SMSVerification.sendSMS(
-  tel: '+15616288674',
+  tel: '+123456789',
   mesg: 'Hi, your OTP is <otp>.',
   otp_timeout: 3600,
   country_code: 'US'
