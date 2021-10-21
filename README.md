@@ -2,7 +2,7 @@ FraudLabs Pro Ruby SDK
 ========================
 This Ruby module enables user to easily implement fraud detection feature into their solution using the API from https://www.fraudlabspro.com.
 
-Below are the features of this PHP module:
+Below are the features of this Ruby module:
 - Fraud analysis and scoring
 - IP address geolocation & proxy validation
 - Email address validation
