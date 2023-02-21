@@ -20,6 +20,8 @@ module FraudlabsproRuby
         request.set_form_data({
           'key' => FraudlabsproRuby::Configuration.api_key,
           'format' => params[:format] || 'json',
+          'source' => 'sdk-ruby',
+          'source_version' => FraudlabsproRuby::VERSION,
           'tel' => params[:tel],
           'mesg' => params[:mesg] || '',
           'otp_timeout' => params[:otp_timeout] || 3600,

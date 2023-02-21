@@ -54,7 +54,7 @@ module FraudlabsproRuby
         request.set_form_data({
           'key' => FraudlabsproRuby::Configuration.api_key,
           'format' => params[:format] || 'json',
-          'source' => 'FraudLabsPro Ruby SDK',
+          'source' => 'sdk-ruby',
           'source_version' => FraudlabsproRuby::VERSION,
           'flp_checksum' => params[:flp_checksum] || '',
 
