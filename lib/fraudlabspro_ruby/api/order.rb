@@ -47,13 +47,13 @@ module FraudlabsproRuby
           params[:card_number] = params[:card_number][0..5]
         end
 
-        uri = URI.parse("https://api.fraudlabspro.com/v1/order/screen")
+        uri = URI.parse("https://api.fraudlabspro.com/v2/order/screen")
         http = Net::HTTP.new(uri.host, uri.port)
         http.use_ssl = true
         request = Net::HTTP::Post.new(uri.request_uri)
         request.set_form_data({
           'key' => FraudlabsproRuby::Configuration.api_key,
-          'format' => params[:format] || 'json',
+          'format' => 'json',
           'source' => 'sdk-ruby',
           'source_version' => FraudlabsproRuby::VERSION,
           'flp_checksum' => params[:flp_checksum] || '',
@@ -107,13 +107,13 @@ module FraudlabsproRuby
 
       # Sends feedback back to FraudLabs Pro.
       def self.feedback(params = {})
-        uri = URI.parse("https://api.fraudlabspro.com/v1/order/feedback")
+        uri = URI.parse("https://api.fraudlabspro.com/v2/order/feedback")
         http = Net::HTTP.new(uri.host, uri.port)
         http.use_ssl = true
         request = Net::HTTP::Post.new(uri.request_uri)
         request.set_form_data({
           'key' => FraudlabsproRuby::Configuration.api_key,
-          'format' => params[:format] || 'xml',
+          'format' => 'json',
           'id' => params[:transaction_id],
           'action' => params[:status] || '',
           'note' => params[:note] || ''
@@ -130,15 +130,11 @@ module FraudlabsproRuby
 
       # Gets transaction result.
       def self.getTransaction(params = {})
-        if params[:format] == nil
-          params[:format] = 'xml'
-        end
-
         if params[:id_type] == nil
           params[:id_type] = ''
         end
 
-        uri = URI.parse("https://api.fraudlabspro.com/v1/order/result?key=" + FraudlabsproRuby::Configuration.api_key + "&format=" + params[:format] + "&id=" + params[:transaction_id] + "&id_type=" + params[:id_type])
+        uri = URI.parse("https://api.fraudlabspro.com/v2/order/result?key=" + FraudlabsproRuby::Configuration.api_key + "&format=json&id=" + params[:transaction_id] + "&id_type=" + params[:id_type])
         http = Net::HTTP.new(uri.host, uri.port)
         http.use_ssl = true
         request = Net::HTTP::Get.new(uri.request_uri)

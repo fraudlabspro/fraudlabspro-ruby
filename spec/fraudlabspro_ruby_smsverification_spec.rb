@@ -11,9 +11,9 @@ describe "FraudlabsproRuby" do
     )
     data = JSON.parse(result.body)
     if $test_api_key == 'YOUR_API_KEY'
-      expect(data['error']).to eq 'API key not found.'
+      expect(data['error']['error_message']).to eq 'INVALID API KEY'
     else
-      expect(data['error']).to eq 'Invalid phone number.'
+      expect(data['error']['error_message']).to eq 'INVALID PHONE NUMBER'
     end
   end
 
@@ -25,9 +25,9 @@ describe "FraudlabsproRuby" do
     )
     data = JSON.parse(result.body)
     if $test_api_key == 'YOUR_API_KEY'
-      expect(data['error']).to eq 'API key not found.'
+      expect(data['error']['error_message']).to eq 'INVALID API KEY'
     else
-      expect(data['error']).to eq 'Invalid OTP.'
+      expect(data['error']['error_message']).to eq 'INVALID OTP'
     end
   end
 

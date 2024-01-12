@@ -7,7 +7,7 @@ describe "FraudlabsproRuby" do
       ip: '8.8.8.8'
     )
     data = JSON.parse(result.body)
-    expect(data['fraudlabspro_message']).to eq 'INVALID API KEY'
+    expect(data['error']['error_message']).to eq 'INVALID API KEY'
   end
 
   it "work correctly with Api Key exist" do
@@ -32,9 +32,9 @@ describe "FraudlabsproRuby" do
     )
     data = JSON.parse(result.body)
     if $test_api_key == 'YOUR_API_KEY'
-      expect(data['fraudlabspro_id']).to eq 'NA'
+      expect(data['error']['error_message']).to eq 'INVALID API KEY'
     else
-      expect(data['ip_country']).to eq 'US'
+      expect(data['ip_geolocation']['country_code']).to eq 'US'
     end
   end
 
@@ -45,7 +45,11 @@ describe "FraudlabsproRuby" do
       id_type: FraudlabsproRuby::Api::Order::FLP_ID
     )
     data = JSON.parse(result.body)
-    expect(data['fraudlabspro_id']).to eq 'NA'
+    if $test_api_key == 'YOUR_API_KEY'
+      expect(data['error']['error_message']).to eq 'INVALID API KEY'
+    else
+      expect(data['error']['error_message']).to eq 'TRANSACTION NOT FOUND'
+    end
   end
 
   it "work correctly with validate order" do
@@ -56,9 +60,9 @@ describe "FraudlabsproRuby" do
     )
     data = JSON.parse(result.body)
     if $test_api_key == 'YOUR_API_KEY'
-      expect(data['fraudlabspro_message']).to eq 'INVALID API KEY'
+      expect(data['error']['error_message']).to eq 'INVALID API KEY'
     else
-      expect(data['fraudlabspro_message']).to eq 'INVALID TRANSACTION ID'
+      expect(data['error']['error_message']).to eq 'TRANSACTION NOT FOUND'
     end
   end
 
