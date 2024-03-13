@@ -5,7 +5,7 @@
 
 # -- Project information
 
-project = 'FraudLabs Pro PHP'
+project = 'FraudLabs Pro Ruby'
 copyright = '2024, FraudLabs Pro'
 author = 'FraudLabs Pro'
 
@@ -31,8 +31,8 @@ myst_enable_extensions = [
 
 # https://myst-parser.readthedocs.io/en/latest/configuration.html#setting-html-metadata
 myst_html_meta = {
-    "description": "FraudLabs Pro PHP SDK to screen the order transaction for payment fraud.",
-    "keywords": "FraudLabs Pro, Fraud Prevention, Fraud Detection, PHP",
+    "description": "FraudLabs Pro Ruby SDK to screen the order transaction for payment fraud.",
+    "keywords": "FraudLabs Pro, Fraud Prevention, Fraud Detection, Ruby",
     "google-site-verification": "DeW6mXDyMnMt4i61ZJBNuoADPimo5266DKob7Z7d6i4",
 }
 
@@ -59,6 +59,6 @@ html_logo = 'images/flp-logo-square-1200.png'
 # Favicon
 html_favicon = 'images/favicon.ico'
 
-html_title = "FraudLabs Pro PHP"
+html_title = "FraudLabs Pro Ruby"
 
 # html_baseurl = "https://ip2proxy-php.readthedocs.io/en/latest/"
