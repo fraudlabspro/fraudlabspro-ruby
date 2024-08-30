@@ -44,9 +44,12 @@ result = FraudlabsproRuby::Api::Order.validate(
   quantity: '1',
   currency: 'USD',
   payment_mode: FraudlabsproRuby::Api::Order::CREDIT_CARD,
+  payment_gateway: FraudlabsproRuby::Api::Order::CREDIT_CARD,
   card_number: '4556553172971283',
 
   # Shipping information
+  ship_first_name: 'Hector',
+  ship_last_name: 'Henderson',
   ship_addr: '4469 Chestnut Street',
   ship_city: 'Tampa',
   ship_state: 'FL',

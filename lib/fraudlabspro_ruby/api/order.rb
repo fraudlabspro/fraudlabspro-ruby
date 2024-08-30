@@ -16,12 +16,11 @@ module FraudlabsproRuby
       # Payment methods.
       CREDIT_CARD = 'CREDITCARD'
       PAYPAL = 'PAYPAL';
-      GOOGLE_CHECKOUT = 'GOOGLECHECKOUT';
       CASH_ON_DELIVERY = 'COD';
-      MONEY_ORDER = 'MONEYORDER';
-      WIRE_TRANSFER = 'WIRED';
       BANK_DEPOSIT = 'BANKDEPOSIT';
-      BITCOIN = 'BITCOIN';
+      GIFT_CARD = 'GIFTCARD';
+      CRYPTO = 'CRYPTO';
+      WIRE_TRANSFER = 'WIRED';
       OTHERS = 'OTHERS';
 
       # ID types.
@@ -63,7 +62,6 @@ module FraudlabsproRuby
           'first_name' => params[:first_name] || '',
           'last_name' => params[:last_name] || '',
           'username_hash' => do_hash(params[:username]) || '',
-          'password_hash' => do_hash(params[:password]) || '',
           'email' => params[:email] || '',
           'email_domain' => email_domain || '',
           'user_phone' => params[:phone] || '',
@@ -80,6 +78,7 @@ module FraudlabsproRuby
           'quantity' => params[:quantity] || 1,
           'currency' => params[:currency] || 'USD',
           'department' => params[:department] || '',
+          'payment_gateway' => params[:payment_gateway] || '',
           'payment_mode' => params[:payment_mode] || '',
 
           # Credit card information.
@@ -89,6 +88,8 @@ module FraudlabsproRuby
           'cvv_result' => params[:card_cvv] || '',
 
           # Shipping information.
+          'ship_first_name' => params[:ship_first_name] || '',
+          'ship_last_name' => params[:ship_last_name] || '',
           'ship_addr' => params[:ship_addr] || '',
           'ship_city' => params[:ship_city] || '',
           'ship_state' => params[:ship_state] || '',

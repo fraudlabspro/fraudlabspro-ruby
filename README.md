@@ -28,12 +28,11 @@ To learn more about installation, usage, and code examples, please visit the dev
 | ---------------------------------------------- |
 | FraudlabsproRuby::Api::Order::CREDIT_CARD      |
 | FraudlabsproRuby::Api::Order::PAYPAL           |
-| FraudlabsproRuby::Api::Order::GOOGLE_CHECKOUT  |
 | FraudlabsproRuby::Api::Order::CASH_ON_DELIVERY |
-| FraudlabsproRuby::Api::Order::MONEY_ORDER      |
-| FraudlabsproRuby::Api::Order::WIRE_TRANSFER    |
 | FraudlabsproRuby::Api::Order::BANK_DEPOSIT     |
-| FraudlabsproRuby::Api::Order::BITCOIN          |
+| FraudlabsproRuby::Api::Order::GIFT_CARD        |
+| FraudlabsproRuby::Api::Order::CRYPTO           |
+| FraudlabsproRuby::Api::Order::WIRE_TRANSFER    |
 | FraudlabsproRuby::Api::Order::OTHERS           |
 
 
