@@ -35,4 +35,12 @@ Gem::Specification.new do |s|
     "spec/fraudlabspro_ruby_fraudvalidation_spec.rb",
     "spec/fraudlabspro_ruby_smsverification_spec.rb"
   ]
+  if s.respond_to?(:metadata=)
+    s.metadata = {
+      "bug_tracker_uri" => "https://github.com/fraudlabspro/fraudlabspro-ruby/issues",
+      "documentation_uri" => "https://www.rubydoc.info/gems/fraudlabspro_ruby",
+      "homepage_uri" => "https://www.fraudlabspro.com",
+      "source_code_uri" => "https://github.com/fraudlabspro/fraudlabspro-ruby",
+    }
+  end
 end

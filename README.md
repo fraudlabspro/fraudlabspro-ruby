@@ -1,3 +1,6 @@
+[![Latest Stable Version](https://img.shields.io/gem/v/fraudlabspro_ruby.svg)](https://rubygems.org/gems/fraudlabspro_ruby)
+[![Total Downloads](https://img.shields.io/gem/dt/fraudlabspro_ruby.svg)](https://rubygems.org/gems/fraudlabspro_ruby)
+
 FraudLabs Pro Ruby SDK
 ========================
 This Ruby module enables user to easily implement fraud detection feature into their solution using the API from https://www.fraudlabspro.com.
