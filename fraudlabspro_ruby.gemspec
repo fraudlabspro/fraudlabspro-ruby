@@ -29,11 +29,13 @@ Gem::Specification.new do |s|
     "lib/fraudlabspro_ruby/api.rb",
     "lib/fraudlabspro_ruby/api/order.rb",
     "lib/fraudlabspro_ruby/api/smsverification.rb",
+    "lib/fraudlabspro_ruby/api/payment.rb",
     "lib/fraudlabspro_ruby/configuration.rb",
     "lib/fraudlabspro_ruby/version.rb",
     "spec/spec_helper.rb",
     "spec/fraudlabspro_ruby_fraudvalidation_spec.rb",
-    "spec/fraudlabspro_ruby_smsverification_spec.rb"
+    "spec/fraudlabspro_ruby_smsverification_spec.rb",
+    "spec/fraudlabspro_ruby_payment_spec.rb"
   ]
   if s.respond_to?(:metadata=)
     s.metadata = {

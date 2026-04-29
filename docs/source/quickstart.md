@@ -120,3 +120,20 @@ result = FraudlabsproRuby::Api::SMSVerification.verifySMS(
   otp: 'OTP_RECEIVED'
 )
 ```
+
+### Payment Feedback
+
+You can report payment gateway feedback as below:
+
+```ruby
+require 'fraudlabspro_ruby'
+
+FraudlabsproRuby::Configuration.api_key = 'YOUR_API_KEY'
+
+result = FraudlabsproRuby::Api::Payment.feedback(
+  email: 'hh5566@gmail.com',
+  status: 'declined',
+  message: 'Call Issuer. Pick Up Card. (2047)',
+  fraudlabspro_id: '20260131-O263CR'
+)
+```

@@ -65,6 +65,7 @@ module FraudlabsproRuby
           'email' => params[:email] || '',
           'email_domain' => email_domain || '',
           'user_phone' => params[:phone] || '',
+          'bill_to' => params[:bill_to] || '',
           'bill_addr' => params[:bill_addr] || '',
           'bill_city' => params[:bill_city] || '',
           'bill_state' => params[:bill_state] || '',
