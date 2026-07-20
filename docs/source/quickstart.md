@@ -40,12 +40,13 @@ result = FraudlabsproRuby::Api::Order.validate(
   # Order information
   user_order_id: '67398',
   user_order_memo: 'Online Shop',
-  amount: '79.89',
-  quantity: '1',
+  amount: '119.98',
+  quantity: '2',
   currency: 'USD',
   payment_mode: FraudlabsproRuby::Api::Order::CREDIT_CARD,
   payment_gateway: FraudlabsproRuby::Api::Order::CREDIT_CARD,
   card_number: '4556553172971283',
+  items: '[{"sku": "SKU-1001","quantity": 1,"price": 99.99,"type": "physical","name": "Wireless Headphones","purchase_type": "one-time purchase"},{"sku": "SKU-2005","quantity": 1,"price": 19.99,"type": "downloadable","name": "Country List"}]',
 
   # Shipping information
   ship_first_name: 'Hector',

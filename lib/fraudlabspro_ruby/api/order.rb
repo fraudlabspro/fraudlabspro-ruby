@@ -81,6 +81,7 @@ module FraudlabsproRuby
           'department' => params[:department] || '',
           'payment_gateway' => params[:payment_gateway] || '',
           'payment_mode' => params[:payment_mode] || '',
+          'items' => params[:items] || '',
 
           # Credit card information.
           'bin_no' => params[:card_number] || '',
